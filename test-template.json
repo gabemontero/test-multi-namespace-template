@@ -44,7 +44,7 @@
       "apiVersion": "v1",
       "metadata": {
         "name": "${DATABASE_SERVICE_NAME}",
-        "namespace": "${NAMESPACE}",
+        "namespace": "${NAMESPACE2}",
         "annotations": {
           "template.openshift.io/expose-uri": "mongodb://{.spec.clusterIP}:{.spec.ports[?(.name==\"mongo\")].port}"
         }
@@ -226,6 +226,12 @@
       "description": "The OpenShift Namespace where the ImageStream resides.",
       "value": "openshift"
     },
+    {
+      "name": "NAMESPACE2",
+      "displayName": "Namespace2",
+      "description": "The OpenShift Namespace where the ImageStream resides.",
+      "value": "ggm-namespace"
+    },    
     {
       "name": "DATABASE_SERVICE_NAME",
       "displayName": "Database Service Name",
