@@ -24,7 +24,7 @@
       "apiVersion": "v1",
       "metadata": {
         "name": "${DATABASE_SERVICE_NAME}",
-        "namespace": "${NAMESPACE}",
+        "namespace": "${NAMESPACE2}",
         "annotations": {
           "template.openshift.io/expose-username": "{.data['database-user']}",
           "template.openshift.io/expose-password": "{.data['database-password']}",
@@ -74,7 +74,7 @@
       "apiVersion": "v1",
       "metadata": {
         "name": "${DATABASE_SERVICE_NAME}",
-        "namespace": "${NAMESPACE}",
+        "namespace": "${NAMESPACE2}",
         "annotations": {
           "template.alpha.openshift.io/wait-for-ready": "true"
         }
